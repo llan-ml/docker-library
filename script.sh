@@ -17,8 +17,8 @@ pause-${ARCH}:3.0 \
 k8s-dns-sidecar-${ARCH}:${DNS_VERSION} \
 k8s-dns-kube-dns-${ARCH}:${DNS_VERSION} \
 k8s-dns-dnsmasq-nanny-${ARCH}:${DNS_VERSION} \
-kubernetes-dashboard-${ARCH} \
-heapster-${ARCH}"
+kubernetes-dashboard-${ARCH}:${DASHBOARD_VERSION} \
+heapster-${ARCH}:${HEAPSTER_VERSION}"
 
 for image in ${docker_image_names}
 do
