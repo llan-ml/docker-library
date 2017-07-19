@@ -3,7 +3,9 @@
 docker_server="gcr.io/google_containers/"
 K8S_VERSION="v1.6.0"
 DNS_VERSION="1.14.1"
+DASHBOARD_VERSION="v1.6.1"
 ETCD_VERSION="3.0.17"
+HEAPSTER_VERSION="v1.3.0"
 ARCH="amd64"
 docker_image_names="\
 kube-apiserver-${ARCH}:${K8S_VERSION} \
@@ -14,7 +16,9 @@ etcd-${ARCH}:${ETCD_VERSION} \
 pause-${ARCH}:3.0 \
 k8s-dns-sidecar-${ARCH}:${DNS_VERSION} \
 k8s-dns-kube-dns-${ARCH}:${DNS_VERSION} \
-k8s-dns-dnsmasq-nanny-${ARCH}:${DNS_VERSION}"
+k8s-dns-dnsmasq-nanny-${ARCH}:${DNS_VERSION} \
+kubernetes-dashboard-${ARCH} \
+heapster-${ARCH}"
 
 for image in ${docker_image_names}
 do
@@ -32,4 +36,5 @@ mkdir -p flannel
 pushd flannel
 echo -e "FROM ${flannel_image_name}\nMAINTAINER Lin Lan" > Dockerfile
 popd
+
 
