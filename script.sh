@@ -24,3 +24,12 @@ do
   echo -e "FROM ${docker_server}${image}\nMAINTAINER Lin Lan" > Dockerfile
   popd
 done
+
+FLANNEL_VERSION="v0.8.0-amd64"
+flannel_image_name="\
+quay.io/coreos/flannel:${FLANNEL_VERSION}"
+mkdir -p flannel
+pushd flannel
+echo -e "FROM ${flannel_image_name}\nMAINTAINER Lin Lan" > Dockerfile
+popd
+
