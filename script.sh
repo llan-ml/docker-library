@@ -2,7 +2,7 @@
 
 docker_server="gcr.io/google_containers/"
 K8S_VERSION="v1.6.0"
-DNS_VERSION="1.14.1"
+DNS_VERSION="1.14.4"
 DASHBOARD_VERSION="v1.6.1"
 ETCD_VERSION="3.0.17"
 HEAPSTER_VERSION="v1.3.0"
