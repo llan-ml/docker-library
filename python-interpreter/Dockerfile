@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Lin Lan
 
-RUN apt-get update && apt-get upgrade && apt-get -y install --no-install-recommends git && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade && apt-get -y install git && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR ~/
 
